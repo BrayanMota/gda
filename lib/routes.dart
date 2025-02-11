@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:gda/apps/auth/pages/login.dart';
 import 'package:gda/apps/auth/pages/register.dart';
-import 'package:gda/apps/auth/pages/forgotPassword.dart';
+import 'package:gda/apps/auth/pages/forgot_password.dart';
 
 class RoutePaths {
   static const String home = '/';

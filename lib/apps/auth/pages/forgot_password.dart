@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gda/utils/custom_colors.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +13,10 @@ class ForgotPasswordPage extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.center,
             colors: [
-              CustomColors.primaryColor,
-              CustomColors.secondaryColor,
+              CustomColors.secondaryBackground,
+              CustomColors.primaryBackground,
+              CustomColors.primaryBackground,
+              CustomColors.primaryBackground,
             ],
           ),
           color: Colors.black,

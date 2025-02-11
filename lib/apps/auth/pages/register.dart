@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gda/components/auth_input.dart';
 import 'package:gda/utils/custom_colors.dart';
+import 'package:gda/utils/utils.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -8,18 +10,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              CustomColors.primaryColor,
-              Colors.black,
-              Colors.black,
-              Colors.black,
-            ],
-          ),
-        ),
+        decoration: Utils.authBackground(),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -31,70 +22,35 @@ class RegisterPage extends StatelessWidget {
                   width: 233,
                   height: 67,
                 ),
-                const Text(
-                  "Criar uma nova conta",
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                const SizedBox(height: 8),
                 const Text(
                   "Cadastre-se para acessar o nosso conteúdo",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14, color: Colors.white),
-                ),
-                const SizedBox(height: 20),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Nome",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: CustomColors.secondaryLabel,
                   ),
                 ),
-                const TextField(
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: CustomColors.inputColor,
-                    border: OutlineInputBorder(),
-                  ),
+                const SizedBox(height: 46),
+                const AuthInput(
+                  label: 'Nome Completo',
+                  inputType: 'text',
                 ),
-                const SizedBox(height: 10),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Email",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
+                const SizedBox(height: 18),
+                const AuthInput(
+                  label: 'Telefone/Celular',
+                  inputType: 'phone',
                 ),
-                const TextField(
-                  style: TextStyle(color: Colors.white),
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: CustomColors.inputColor,
-                    border: OutlineInputBorder(),
-                  ),
+                const SizedBox(height: 18),
+                const AuthInput(
+                  label: 'E-mail',
+                  inputType: 'email',
                 ),
-                const SizedBox(height: 10),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Senha",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
+                const SizedBox(height: 18),
+                const AuthInput(
+                  label: 'Senha',
+                  inputType: 'password',
                 ),
-                const TextField(
-                  obscureText: true,
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: CustomColors.inputColor,
-                    border: OutlineInputBorder(),
-                    suffixIcon: Icon(Icons.visibility, color: Colors.white),
-                  ),
-                ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 18),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

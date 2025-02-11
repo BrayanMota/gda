@@ -9,11 +9,10 @@ class CustomThemeData {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
-          backgroundColor: CustomColors.primaryColor,
+          backgroundColor: CustomColors.authButton,
           foregroundColor: Colors.black, // Cor do texto
           textStyle: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
+            fontSize: 18,
           ),
         ),
       ),

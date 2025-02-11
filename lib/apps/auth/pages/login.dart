@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gda/components/auth_input.dart';
 import 'package:gda/routes.dart';
 import 'package:gda/utils/custom_colors.dart';
+import 'package:gda/utils/utils.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -9,19 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              CustomColors.primaryColor,
-              CustomColors.secondaryColor,
-              Colors.black,
-              Colors.black,
-            ],
-            stops: [0.0, 0.33, 0.33, 1.0],
-          ),
-        ),
+        decoration: Utils.authBackground(),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -33,47 +23,25 @@ class LoginPage extends StatelessWidget {
                   width: 233,
                   height: 67,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 8),
                 const Text(
                   "Seja bem-vindo",
-                  style: TextStyle(fontSize: 14, color: Colors.white),
-                ),
-                const SizedBox(height: 14),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Email",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: CustomColors.secondaryLabel,
                   ),
                 ),
-                const TextField(
-                  style: TextStyle(color: Colors.white),
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: CustomColors.inputColor,
-                    border: OutlineInputBorder(),
-                  ),
+                const SizedBox(height: 46),
+                const AuthInput(
+                  label: 'E-mail',
+                  inputType: 'email',
                 ),
-                const SizedBox(height: 10),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Senha",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
+                const SizedBox(height: 18),
+                const AuthInput(
+                  label: 'Senha',
+                  inputType: 'password',
                 ),
-                const TextField(
-                  obscureText: true,
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: CustomColors.inputColor,
-                    border: OutlineInputBorder(),
-                    suffixIcon: Icon(Icons.visibility, color: Colors.white),
-                  ),
-                ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 18),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -85,12 +53,12 @@ class LoginPage extends StatelessWidget {
                     child: const Text(
                       "Esqueci minha senha",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: CustomColors.secondaryLabel,
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 18),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
