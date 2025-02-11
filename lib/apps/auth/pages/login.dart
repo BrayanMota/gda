@@ -74,7 +74,11 @@ class LoginPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(
+                        RoutePaths.home,
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
                     ),
