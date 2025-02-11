@@ -15,7 +15,7 @@ class RoutePaths {
       // home: (context) => const HomePage(),
       login: (context) => const LoginPage(),
       register: (context) => const RegisterPage(),
-      forgotPassword: (context) => ForgotPasswordPage(),
+      forgotPassword: (context) => const ForgotPasswordPage(),
     };
   }
 }

@@ -17,7 +17,7 @@ class AuthLabel extends StatelessWidget {
       style: const TextStyle(
         fontSize: CustomSizes.authLabel,
         fontWeight: FontWeight.bold,
-        color: CustomColors.authLabelButton,
+        color: CustomColors.primaryAuthLabel,
       ),
     );
   }

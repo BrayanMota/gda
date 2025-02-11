@@ -13,9 +13,8 @@ class Utils {
           CustomColors.primaryBackground,
         ],
         stops: [
-          0.2, // Primeira transição
-          0.31, // Suavização entre as cores
-          // 0.35, // Suavização entre as cores
+          0.13, // Primeira transição
+          0.23, // Suavização entre as cores
           1.0, // Finaliza no primaryBackground
         ],
       ),
